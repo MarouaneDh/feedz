@@ -1,0 +1,154 @@
+import { Component } from '@angular/core';
+import { DataService } from '../service/data.service';
+
+@Component({
+  selector: 'app-tab2',
+  templateUrl: 'tab2.page.html',
+  styleUrls: ['tab2.page.scss']
+})
+export class Tab2Page {
+  countries:any[]=[]
+  Flags=[
+    {
+      country:"USA",
+      name:"American",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png"
+    },
+    {
+      country:"UK",
+      name:"British",
+      url:"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png"
+    },
+    {
+      country:"Canada",
+      name:"Canadian",
+      url:"https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg"
+    },
+    {
+      country:"China",
+      name:"Chinese",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/2560px-Flag_of_the_People%27s_Republic_of_China.svg.png"
+    },
+    {
+      country:"Banate of Croatia",
+      name:"Croatian",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Flag_of_Banate_of_Croatia_%281939-1941%29.svg/3000px-Flag_of_Banate_of_Croatia_%281939-1941%29.svg.png"
+    },
+    {
+      country:"Netherlands",
+      name:"Dutch",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/2560px-Flag_of_the_Netherlands.svg.png"
+    },
+    {
+      country:"Egypt",
+      name:"Egyptian",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/2560px-Flag_of_Egypt.svg.png"
+    },
+    {
+      country:"France",
+      name:"French",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/2560px-Flag_of_France.svg.png"
+    },
+    {
+      country:"Greece",
+      name:"Greek",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/2560px-Flag_of_Greece.svg.png"
+    },
+    {
+      country:"India",
+      name:"Indian",
+      url:"https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+    },
+    {
+      country:"Ireland",
+      name:"Irish",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/2560px-Flag_of_Ireland.svg.png"
+    },
+    {
+      country:"Italy",
+      name:"Italian",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/2560px-Flag_of_Italy.svg.png"
+    },
+    {
+      country:"Jamaica",
+      name:"Jamaican",
+      url:"https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Jamaica.svg"
+    },
+    {
+      country:"Japan",
+      name:"Japanese",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png"
+    },
+    {
+      country:"Kenya",
+      name:"Kenyan",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/800px-Flag_of_Kenya.svg.png"
+    },
+    {
+      country:"Malaysia",
+      name:"Malaysian",
+      url:"https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Malaysia_%283-2%29.svg"
+    },
+    {
+      country:"Mexico",
+      name:"Mexican",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2560px-Flag_of_Mexico.svg.png"
+    },
+    {
+      country:"Morocco",
+      name:"Moroccan",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1280px-Flag_of_Morocco.svg.png"
+    },
+    {
+      country:"Poland",
+      name:"Polish",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/2560px-Flag_of_Poland.svg.png"
+    },
+    {
+      country:"Portugal",
+      name:"Portuguese",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/2560px-Flag_of_Portugal.svg.png"
+    },
+    {
+      country:"Russia",
+      name:"Russian",
+      url:"https://cdn.britannica.com/42/3842-004-F47B77BC/Flag-Russia.jpg"
+    },
+    {
+      country:"Tailand",
+      name:"Thai",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/2560px-Flag_of_Thailand.svg.png"
+    },
+    {
+      country:"Spain",
+      name:"Spanish",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/2560px-Flag_of_Spain.svg.png"
+    },
+    {
+      country:"Tunisia",
+      name:"Tunisian",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/2560px-Flag_of_Tunisia.svg.png"
+    },
+    {
+      country:"Turkey",
+      name:"Turkish",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/2560px-Flag_of_Turkey.svg.png"
+    },
+    {
+      country:"Vietnam",
+      name:"Vietnamese",
+      url:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2560px-Flag_of_Vietnam.svg.png"
+    }
+  ]
+  constructor(private dataService:DataService) {}
+
+
+  ngOnInit():void{
+    this.getCountries()
+}
+getCountries(){
+      this.dataService.getCountries().subscribe(async(res:any)=>{
+        this.countries=await res.meals
+      })
+    }
+}

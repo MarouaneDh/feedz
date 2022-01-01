@@ -1,0 +1,7 @@
+{
+  "name": "FEEDZ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

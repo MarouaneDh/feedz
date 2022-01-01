@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Mealz </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-color: black" [fullscreen]="true">
+  <div style="background-color: black; margin-top: -50px; padding-top: 20px">
+    <input
+      style="margin: 50px 10px 20px 10px; width: 95%; height: 40px"
+      [(ngModel)]="name"
+      (change)="searchMeal(name)"
+      type="text"
+    />
+    <div *ngIf="searchedMeals.length!==0">
+      <span style="color: white; font-size: 20px; margin: 10px"
+        >{{searchedMeals.length}} mealz found</span
+      >
+    </div>
+    <div style="margin: 20px" *ngFor="let meal of meals">
+      <app-one-slide [meal]="meal"></app-one-slide>
+    </div>
+  </div>
+</ion-content>

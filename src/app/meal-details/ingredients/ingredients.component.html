@@ -1,0 +1,609 @@
+<div
+  style="
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    color: white;
+  "
+>
+  <div style="display: flex; flex-direction: column">
+    <span style="margin: 15px; font-size: 16px"
+      >Ingredients needed to cook your <strong>{{ meal.strMeal }}</strong> :
+    </span>
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: start;
+        margin: 15px 0;
+      "
+    >
+      <div *ngIf="meal.strIngredient1 !== '' && meal.strIngredient1 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure1 !== '' &&
+              meal.strMeasure1 !== ' ' &&
+              meal.strMeasure1 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient1
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure1 }} of {{ meal.strIngredient1 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient1
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient1 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient2 !== '' && meal.strIngredient2 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure2 !== '' &&
+              meal.strMeasure2 !== ' ' &&
+              meal.strMeasure2 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient2
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure2 }} of {{ meal.strIngredient2 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient2
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient2 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient3 !== '' && meal.strIngredient3 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure3 !== '' &&
+              meal.strMeasure3 !== ' ' &&
+              meal.strMeasure3 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient3
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure3 }} of {{ meal.strIngredient3 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient3
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient3 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient4 !== '' && meal.strIngredient4 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure4 !== '' &&
+              meal.strMeasure4 !== ' ' &&
+              meal.strMeasure4 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient4
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure4 }} of {{ meal.strIngredient4 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient4
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient4 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient5 !== '' && meal.strIngredient5 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure5 !== '' &&
+              meal.strMeasure5 !== ' ' &&
+              meal.strMeasure5 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient5
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure5 }} of {{ meal.strIngredient5 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient5
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient5 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient6 !== '' && meal.strIngredient6 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure6 !== '' &&
+              meal.strMeasure6 !== ' ' &&
+              meal.strMeasure6 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient6
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure6 }} of {{ meal.strIngredient6 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient6
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient6 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient7 !== '' && meal.strIngredient7 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure7 !== '' &&
+              meal.strMeasure7 !== ' ' &&
+              meal.strMeasure7 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient7
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure7 }} of {{ meal.strIngredient7 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient7
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient7 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient8 !== '' && meal.strIngredient8 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure8 !== '' &&
+              meal.strMeasure8 !== ' ' &&
+              meal.strMeasure8 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient8
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure8 }} of {{ meal.strIngredient8 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient8
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient8 }}</span>
+        </ng-template>
+      </div>
+
+      <div *ngIf="meal.strIngredient9 !== '' && meal.strIngredient9 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure9 !== '' &&
+              meal.strMeasure9 !== ' ' &&
+              meal.strMeasure9 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient9
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure9 }} of {{ meal.strIngredient9 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient9
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient9 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient10 !== '' && meal.strIngredient10 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure10 !== '' &&
+              meal.strMeasure10 !== ' ' &&
+              meal.strMeasure10 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient10
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure10 }} of {{ meal.strIngredient10 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient10
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient10 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient11 !== '' && meal.strIngredient11 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure11 !== '' &&
+              meal.strMeasure11 !== ' ' &&
+              meal.strMeasure11 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient11
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure11 }} of {{ meal.strIngredient11 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient11
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient11 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient12 !== '' && meal.strIngredient12 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure12 !== '' &&
+              meal.strMeasure12 !== ' ' &&
+              meal.strMeasure12 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient12
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure12 }} of {{ meal.strIngredient12 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient12
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient12 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient13 !== '' && meal.strIngredient13 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure13 !== '' &&
+              meal.strMeasure13 !== ' ' &&
+              meal.strMeasure13 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient13
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure13 }} of {{ meal.strIngredient13 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient13
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient13 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient14 !== '' && meal.strIngredient14 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure14 !== '' &&
+              meal.strMeasure14 !== ' ' &&
+              meal.strMeasure14 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient14
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure14 }} of {{ meal.strIngredient14 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient14
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient14 }}</span>
+        </ng-template>
+      </div>
+
+      <div *ngIf="meal.strIngredient15 !== '' && meal.strIngredient15 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure15 !== '' &&
+              meal.strMeasure15 !== ' ' &&
+              meal.strMeasure15 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient15
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure15 }} of {{ meal.strIngredient15 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient15
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient15 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient16 !== '' && meal.strIngredient16 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure16 !== '' &&
+              meal.strMeasure16 !== ' ' &&
+              meal.strMeasure16 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient16
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure16 }} of {{ meal.strIngredient16 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient16
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient16 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient17 !== '' && meal.strIngredient17 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure17 !== '' &&
+              meal.strMeasure17 !== ' ' &&
+              meal.strMeasure17 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient17
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure17 }} of {{ meal.strIngredient17 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient17
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient17 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient18 !== '' && meal.strIngredient18 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure18 !== '' &&
+              meal.strMeasure18 !== ' ' &&
+              meal.strMeasure18 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient18
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure18 }} of {{ meal.strIngredient18 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient18
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient18 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient19 !== '' && meal.strIngredient19 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure19 !== '' &&
+              meal.strMeasure19 !== ' ' &&
+              meal.strMeasure19 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient19
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure19 }} of {{ meal.strIngredient19 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient19
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient19 }}</span>
+        </ng-template>
+      </div>
+      <div *ngIf="meal.strIngredient20 !== '' && meal.strIngredient20 !== null">
+        <div
+          *ngIf="
+            meal.strMeasure20 !== '' &&
+              meal.strMeasure20 !== ' ' &&
+              meal.strMeasure20 !== null;
+            else oneItem
+          "
+          style="display: flex; align-items: center; font-size: 12px"
+        >
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient20
+            }}-Small.png"
+            alt=""
+          />
+          <span>{{ meal.strMeasure20 }} of {{ meal.strIngredient20 }} </span>
+        </div>
+        <ng-template style="display: flex; align-items: center" #oneItem>
+          <img
+            style="width: 48px; height: 48px; margin: 0 2px"
+            src="https://www.themealdb.com/images/ingredients/{{
+              meal.strIngredient20
+            }}-Small.png"
+          />
+          <span style="font-size: 12px">{{ meal.strIngredient20 }}</span>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

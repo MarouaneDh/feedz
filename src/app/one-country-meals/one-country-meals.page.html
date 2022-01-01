@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{country}} Mealz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-color: black" [fullscreen]="true">
+  <div style="background-color: black; padding-top: 20px">
+    <div style="margin: 20px" *ngFor="let meal of meals">
+      <div
+        style="display: flex; flex-direction: column; align-items: center"
+        routerLink="/{{meal.idMeal}}"
+      >
+        <img
+          style="border-radius: 15px; margin: 15px"
+          src="{{meal.strMealThumb}}"
+          alt=""
+        />
+        <span style="color: white">{{meal.strMeal}}</span>
+      </div>
+      <!-- <app-one-slide
+        routerLink="/{{meal.idMeal}}"
+        [meal]="meal"
+      ></app-one-slide> -->
+    </div>
+  </div>
+</ion-content>

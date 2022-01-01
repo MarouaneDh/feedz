@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Countries </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-color: black" [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Countries</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div
+    style="
+      background-color: black;
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    "
+  >
+    <div *ngFor="let country of countries">
+      <div *ngFor="let item of Flags">
+        <div *ngIf="country.strArea===item.name">
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              margin: 5px;
+              padding: 10px;
+              width: 150px;
+            "
+            routerLink="/tabs/tab2/country/{{item.name}}"
+          >
+            <img style="margin: 10px" src="{{item.url}}" alt="" />
+            <span style="color: white; font-size: 20px; font-weight: bold"
+              >{{item.country}}</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

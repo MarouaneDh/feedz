@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "FEEDZ",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

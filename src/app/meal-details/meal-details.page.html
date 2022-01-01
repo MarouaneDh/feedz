@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{meal.strMeal}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="background-color: black; padding: 20px 10px; color: white">
+    <div
+      style="
+        padding: 10px;
+        border-radius: 15px;
+        border: gray 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+        background-color: rgba(128, 128, 128, 0.253);
+        color: white;
+      "
+    >
+      <app-ingredients [meal]="meal"></app-ingredients>
+      <span style="font-size: 20px; margin: 10px 0">
+        {{meal.strInstructions}}
+      </span>
+      <span
+        style="
+          background-color: rgba(128, 128, 128, 0.253);
+          padding: 10px;
+          border-radius: 10px;
+        "
+        >To help you understand better the cooking process, you can go watch the
+        video by clicking on <a href="{{meal.strYoutube}}">THIS LINK</a></span
+      >
+
+      <ion-button routerLink="">Go back to mealz list</ion-button>
+      <ion-button routerLink="/country/{{ meal.strArea }}"
+        >See other {{ meal.strArea }} Mealz</ion-button
+      >
+    </div>
+  </div>
+</ion-content>
